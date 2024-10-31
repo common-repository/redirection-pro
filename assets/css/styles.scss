@@ -1,0 +1,139 @@
+a[data-rp-broken]{
+    opacity: .5;
+    pointer-events: none;
+    text-decoration: red wavy underline
+}
+
+.tippy-box {
+
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+    .tippy-content {
+
+        padding: 0;
+        overflow: hidden;
+
+        h3,
+        p,
+        span,
+        small,
+        img {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .rp-og-preview {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rp-og-preview-header,
+        .rp-og-preview-description,
+        .rp-og-preview-image-wrap {
+            display: flex;
+        }
+
+        .rp-og-preview-image-wrap{
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+
+        .rp-og-preview-title-wrap small{
+            opacity: .6;
+            font-size: .73rem;
+            line-height: 1.3;
+        }
+
+        .rp-og-preview-title-wrap {
+            h3 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                font-size: 13px;
+                font-weight: 500;
+                margin-bottom: 0.2em;
+            }
+        }
+        
+
+        .rp-og-preview-favicon-wrap img{
+            position: relative;
+            top: 0.2em;
+            margin-inline-end: .5rem;
+            max-height: 1rem;
+            max-width: 100%;
+            height: auto;
+            width: 1rem;
+        }
+
+        .rp-og-preview-description{
+            margin: 0;
+            padding-top: .5rem;
+            font-size: .73rem;
+            opacity: .8;
+            line-height: 1.2;
+            font-weight: normal;
+        }
+
+        .rp-og-preview-image-wrap {
+
+            background-color: rgba(125,125,125, .1);
+            justify-content: center;
+            margin-top: .5rem;
+
+            img {
+                min-width: 140px;
+                max-width: 100%;
+                height: 140px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+    }
+
+    &[data-theme~='translucent']{
+        .rp-og-preview-image-wrap{
+            background-color: rgba(125,125,125, .5);
+        }
+    }
+
+    &[data-theme~='rp-light'],
+    &[data-theme~='rp-dark'] {
+
+        backdrop-filter: blur(6px);
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+
+        .tippy-content {
+            border-radius: 4px;
+        }
+
+        .tippy-arrow{
+            color:rgba(255, 255, 255, .7)
+        }
+    }
+
+    &[data-theme~='rp-light'] {
+        background-color: rgba(255, 255, 255, .7);
+
+        .tippy-content {
+            color: black;
+        }
+    }
+
+    &[data-theme~='rp-dark'] {
+        background-color: rgba(0, 0, 0, .7);
+
+        .tippy-content {
+            color: white;
+        }
+
+        .tippy-arrow{
+            color:rgba(0, 0, 0, .7);
+        }
+    }
+
+}

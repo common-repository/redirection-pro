@@ -1,0 +1,32 @@
+<template id="rp-og-preview-template">
+    <div class="rp-og-preview">
+        <div class="rp-og-preview-header">
+            <div class="rp-og-preview-favicon-wrap">
+                <img alt="" src="%FAVICON%" />
+            </div>
+            <div class="rp-og-preview-title-wrap">
+                <h3>%TITLE%</h3>
+                <small>%URL%</small>
+            </div>
+        </div>
+        <div class="rp-og-preview-image-wrap">
+            <img alt="%ALT%" src="%IMG%" />
+        </div>
+        <div class="rp-og-preview-description">
+            <p>%DESCRIPTION%</p>
+        </div>
+    </div>
+</template>
+
+<template id="rp-preview-template">
+    <div class="rp-og-preview">
+        <div class="rp-og-preview-header">
+            <div class="rp-og-preview-favicon-wrap">
+                <img alt="" src="%FAVICON%" />
+            </div>
+            <div class="rp-og-preview-title-wrap">
+                <small>%URL%</small>
+            </div>
+        </div>
+    </div>
+</template>
